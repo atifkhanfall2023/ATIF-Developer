@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Payment - Online Library Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f402;
+        }
+
+        .navbar {
+            background-color: #d9e0e7;
+        }
+
+        .navbar-brand {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ccc;
+        }
+
+        .payment-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .payment-logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .payment-logo {
+            max-width: 10%;
+            height: 10;
+            margin: 10px;
+        }
+
+        .btn-primary {
+            background-color: #e100ff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <style>
+        /* Your existing styles here */
+
+        .navbar-brand img {
+            background-color: #2383e4;
+            max-width: 50px; /* Set your desired max-width */
+            height: auto;
+            border-radius: 50%; /* Create a circular shape */
+            margin-right: 10px; /* Add margin for separation */
+            animation: rotateLogo 5s linear infinite; /* Adjust the duration as needed */
+        }
+
+        @keyframes rotateLogo {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+    <style>
+        /* Your existing styles here */
+    
+        .black-background {
+            background-color: #000; /* Set the background color to black */
+            color: #fff; /* Set text color to white */
+            padding: 20px; /* Adjust padding as needed */
+            border-radius: 8px; /* Add rounded corners */
+        }
+    </style>
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="1.png" alt="Logo 1" style="max-width: 40px; margin-right: 10px;"> <span style="color: #e74c3c; font-weight: bold;">IT'S Atif Books Agency</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="categories.html"><span style="color: #e74c3c; font-weight: bold;">Different Books </span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html"><span style="color: #e74c3c; font-weight: bold;">Cart Books</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="payment.html"><span style="color: #e74c3c; font-weight: bold;">Payment Method Online</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html"><span style="color: #e74c3c; font-weight: bold;">Contact With Us</span></a>
+                </li>
+                <li class="nav-item">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchInput" style="background-color: #343a40; color: #e74c3c; border-color: #e74c3c;">
+                        <button style="color: #e74c3c; background-color: #343a40;" class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="searchGoogle()">Search</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container payment-container">
+        <h2>Payment</h2>
+        <p>Select your preferred payment method:</p>
+        <div class="payment-logo-container">
+            <img src="3.png" alt="Visa" class="payment-logo">
+            <img src="download.png" alt="MasterCard" class="payment-logo">
+            <img src="download (1).png" alt="PayPal" class="payment-logo">
+        </div>
+
+        <form class="black-background">
+            <!-- Add your payment form fields here -->
+            <div class="form-group">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" class="form-control" id="cardNumber" placeholder="Enter card number">
+            </div>
+            <div class="form-group">
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY">
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="text" class="form-control" id="cvv" placeholder="CVV">
+            </div>
+        
+            <button type="submit" class="btn btn-primary">Submit Payment</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function searchGoogle() {
+            const searchInput = document.getElementById('searchInput').value;
+            const googleSearchURL = `https://www.google.com/search?q=${encodeURIComponent(searchInput)}`;
+            window.location.href = googleSearchURL;
+            function submitPayment() {
+                // Simulate a successful payment submission
+                // You can replace this with actual payment processing logic
+                // For demonstration purposes, we use a simple alert
+                alert('Payment successfully submitted!');
+        
+                // Redirect to index.html after a short delay (adjust as needed)
+                setTimeout(function () {
+                    window.location.href = 'index.html';
+                }, 1000); // Redirect after 1 second
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Contact Us - Online Library Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #020911; /* Updated background color to black */
+            color: #fff; /* Set text color to white */
+        }
+
+        .navbar {
+            background-color: #000; /* Updated navigation bar color to black */
+        }
+
+        .navbar-brand {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ccc;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #000; /* Updated contact form card background color to black */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Updated box shadow color */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff; /* Set form input background color to white */
+            color: #000; /* Set form input text color to black */
+        }
+
+        .btn-primary {
+            background-color: #007bff04;
+            border: none;
+            color: #fff; /* Set button text color to white */
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <!-- Additional Styles -->
+    <style>
+        /* Your existing styles here */
+
+        .navbar-brand img {
+            background-color: #020911;
+            max-width: 50px; /* Set your desired max-width */
+            height: auto;
+            border-radius: 50%; /* Create a circular shape */
+            margin-right: 10px; /* Add margin for separation */
+            animation: rotateLogo 5s linear infinite; /* Adjust the duration as needed */
+        }
+
+        @keyframes rotateLogo {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="1.png" alt="Logo 1" style="max-width: 40px; margin-right: 10px;"> <span style="color: #e74c3c; font-weight: bold;">IT'S Atif Books Agency</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="categories.html"><span style="color: #e74c3c; font-weight: bold;">Different Books </span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html"><span style="color: #e74c3c; font-weight: bold;">Cart Books</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="payment.html"><span style="color: #e74c3c; font-weight: bold;">Payment Method Online</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html"><span style="color: #e74c3c; font-weight: bold;">Contact With Us</span></a>
+                </li>
+                <li class="nav-item">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchInput" style="background-color: #343a40; color: #e74c3c; border-color: #e74c3c;">
+                        <button style="color: #e74c3c; background-color: #343a40;" class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="searchGoogle()">Search</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container contact-container">
+        <h2 style="text-align: center;">Contact Us</h2>
+        <p>Any feedback you can freely ask  to reach out to us for any inquiries or assistance.</p>
+
+        <form>
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="background-color: white; background-color:gold; ">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function searchGoogle() {
+            const searchInput = document.getElementById('searchInput').value;
+            const googleSearchURL = `https://www.google.com/search?q=${encodeURIComponent(searchInput)}`;
+            window.location.href = googleSearchURL;
+        }
+    </script>
+</body>
+
+</html>

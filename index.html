@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BookHub - Your Ultimate Online Library</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #291919;
+            margin: 0;
+            overflow-x: hidden;
+            animation: changeBackgroundColor 10s infinite alternate;
+        }
+
+        .navbar {
+            background-color: #333;
+        }
+
+        .navbar-brand {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #bbb;
+        }
+
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slideshow-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .slideshow-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            font-size: 2em;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .sl_container {
+            height: 60vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            transition: background-color 0.5s;
+            animation: scaleInfinite 3s infinite alternate;
+            border-radius: 10px;
+        }
+
+        .sl_container:hover {
+            background-color: #02060b;
+        }
+
+        .sl_container img,
+        .slideshow-text {
+            opacity: 0;
+            text-align: center;
+            transform: scale(0.8);
+            animation: fadeIn 1s ease-in-out forwards, scaleIn 0.8s ease-in-out forwards;
+        }
+
+        .sl_container:hover img,
+        .sl_container:hover .slideshow-text {
+            transform: scale(1);
+        }
+
+        .sl_container img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.5s;
+            border-radius: 10px;
+        }
+
+        .slideshow-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            font-weight: bold;
+            transition: transform 0.5s;
+            border-radius: 10px;
+        }
+
+        .slideshow-text a {
+            color: white;
+            text-decoration: none;
+            background-color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .slideshow-text a:hover {
+            background-color: #b3005a;
+        }
+
+        .hidden-sentence {
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleIn {
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes scaleInfinite {
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        .description-container {
+            margin: 20px 0;
+            background-color: #ffffff01;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .description-container h2 {
+            color: #b3ff00;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .description-container p {
+            color:white;
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+
+        .description-container h3 {
+            color: #ccff00;
+            text-align: center;
+            font-size: 1.8em;
+            margin-top: 20px;
+        }
+
+        .website-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .website-list li {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .website-list a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .website-list a:hover {
+            text-decoration: underline;
+        }
+
+        .join-websites {
+            margin-top: 30px;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="1.png" alt="Logo" style="width: 50px; border-radius: 50%; margin-right: 10px;">
+            <span style="color: rgb(200, 255, 0);">IT'S Atif Books Agency</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="categories.html"><span style="color: #fff;">Different Books</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html"><span style="color: #fff;">Cart Books</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="payment.html"><span style="color: #fff;">Payment Online Method</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html"><span style="color: #fff;">Contact With Us</span></a>
+                </li>
+                <li class="nav-item">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                            id="searchInput">
+                        <button style="color: #f1f4f7;" class="btn btn-outline-success my-2 my-sm-0" type="button"
+                            onclick="searchGoogle()">Search</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="slideshow-container">
+        <img class="slide" src="111.webp" alt="Slide 1">
+        <img class="slide" src="222.jpg" alt="Slide 2">
+        <img class="slide" src="333.jpg" alt="Slide 3">
+        <div class="slideshow-text">
+            Welcome to Itz Atif Books Agency- THis is your Online Library!
+            <p class="hidden-sentence">Unlock the world of imagination and knowledge.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="description-container">
+            <h2>  Welcome to Itz Atif Books Agency- THis is your Online Library!</h2>
+            <p>Discover a world of literature at your fingertips with BookHub, your go-to destination for exploring and
+                acquiring the latest and most captivating books. Immerse yourself in a diverse collection of genres, from
+                thrilling mysteries to heartwarming romances, all curated to cater to every reader's taste.</p>
+
+            <h3>Key Features:</h3>
+            <ul style="color: white;">
+                <li><strong>User-Friendly Interface:</strong> 
+                    Ensure an intuitive and easy-to-navigate website design.
+                    Implement a clear and efficient search functionality.</li>
+                <li><strong>Book Categories and Filters:</strong> 
+                    Categorize books logically (fiction, non-fiction, genres, etc.).
+Provide filters to help users refine their searches (author, price range, format, etc.).</li>
+                <li><strong>Interactive Book Cards:</strong> Explore books with detailed information presented in
+                    interactive card formats. Hover over cards for a closer look, and click to delve into the details.
+                </li>
+                <li><strong>Wishlist and Shopping Cart:</strong> Add your favorite books to the cart with a simple
+                    click, and enjoy a seamless checkout process for a hassle-free shopping experience.</li>
+                <li><strong>Stay Connected:</strong> Connect with fellow book enthusiasts through our community forum,
+                    share your thoughts on your latest reads, and discover hidden literary gems.</li>
+            </ul>
+        </div>
+
+        
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.style.display = 'block';
+                } else {
+                    slide.style.display = 'none';
+                }
+            });
+        }
+
+        function showNextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function startSlideshow() {
+            showSlide(currentSlide);
+            setInterval(showNextSlide, 3000);
+        }
+
+        startSlideshow();
+
+        function searchGoogle() {
+            const searchInput = document.getElementById('searchInput').value;
+            const googleSearchURL = `https://www.google.com/search?q=${encodeURIComponent(searchInput)}`;
+            window.location.href = googleSearchURL;
+        }
+    </script>
+
+</body>
+
+</html>
