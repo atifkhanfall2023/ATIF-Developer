@@ -1,0 +1,15 @@
+{
+  "name": "task",
+  "version": "2.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Atif khan",
+  "license": "Iccs",
+  "dependencies": {
+    "express": "^5.18.2",
+    "nodemailer": "^4.9.7"
+  }
+}
